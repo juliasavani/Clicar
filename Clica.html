@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Aniversário de Maria</title>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      background-color: #FCEEC7;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 18px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .continue-button {
+      background-color: #FFB0B0;
+      color: #FFFFFF;
+    }
+
+    .confirmation {
+      text-align: center;
+      display: none;
+    }
+
+    .red-button {
+      background-color: #FF9999;
+      color: #FFFFFF;
+    }
+
+    .green-button {
+      background-color: #99FF99;
+      color: #FFFFFF;
+    }
+
+    .message {
+      margin-top: 20px;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div style="text-align: center;">
+    <button class="button continue-button" onclick="showConfirmation()">Continuar</button>
+  </div>
+
+  <div id="confirmation" class="confirmation">
+    <p>Tem certeza?</p>
+    <button class="button red-button" onclick="removeButton()">Não</button>
+    <button class="button green-button" onclick="showThanks()">Sim</button>
+    <p style="font-size: 12px;">*Na curiosidade, aperte o Não*</p>
+  </div>
+
+  <div id="message" class="message" style="display: none;">
+    <p>
+      Olá Maria :)<br><br>
+
+      Feliz aniversário! Hoje é um dia especial, por mais um ano da sua vida e das memórias incríveis que compartilhamos juntas. Quero que saiba que nossa amizade continua viva em meu coração.<br><br>
+
+      Lembro-me dos momentos divertidos e das aventuras que vivemos naquela antiga escola. Você sempre foi uma presença alegre em minha vida, trazendo sorrisos e risadas para os nossos dias. As risadas compartilhadas, as confidências trocadas e as brincadeiras inesquecíveis criaram laços que o tempo e a distância não podem quebrar.<br><br>
+
+      Às vezes, sinto falta das nossas conversas intermináveis e das risadas compartilhadas nos corredores. Mas mesmo que não estejamos mais na mesma escola, quero que saiba que você é uma amiga verdadeira e especial para mim.<br><br>
+
+      Neste dia especial, desejo-lhe um aniversário repleto de alegria, amor e realizações. Que todos os seus sonhos se tornem realidade e que cada novo ano traga consigo novas oportunidades e momentos felizes. Você merece toda a felicidade do mundo &lt;3<br><br>
+
+      Mesmo que estejamos fisicamente distantes, saiba que estou aqui para você, sempre. Seja para compartilhar suas alegrias ou para oferecer apoio nos momentos difíceis, estou apenas a uma ligação ou mensagem de distância.<br><br>
+
+      Maria, que este novo ano de vida seja repleto de conquistas, aprendizados e felicidade. Que você continue brilhando com sua personalidade única e iluminando o mundo ao seu redor. Seja feliz, siga seus sonhos e saiba que estarei torcendo por você em cada passo do caminho.<br><br>
+
+      Com todo o carinho,<br>
+      Julia.
+    </p>
+    <a href="https://vm.tiktok.com/ZM2AXhULJ/" class="button continue-button" target="_blank">Aperte</a>
+  </div>
+
+  <script>
+    function showConfirmation() {
+      document.getElementById("confirmation").style.display = "block";
+    }
+
+    function removeButton() {
+      var confirmation = document.getElementById("confirmation");
+      confirmation.getElementsByTagName("button")[0].style.display = "none";
+      confirmation.getElementsByTagName("p")[0].innerHTML = "Obrigada";
+    }
+
+    function showThanks() {
+      document.getElementById("message").style.display = "block";
+    }
+  </script>
+</body>
+</html>
